@@ -52,7 +52,7 @@ int main (int argc, char * argv[])
         
         if (fork () == 0) {
             if (execl (
-                "/Users/olivier/Desktop/ledger_dir/coin/bin/coin_message_consume", 
+                "./bin/coin_message_consume", 
                 "coin_message_consume", 
                 "ledger.bin", 
                 "message.bin",

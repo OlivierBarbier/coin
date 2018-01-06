@@ -2,9 +2,9 @@
 
 from=$1
 to=$2
-from_keypair="../../keys/$from-keypair.bin"
-from_pubkey="../../keys/$from-pubkey.bin"
-to_pubkey="../../keys/$to-pubkey.bin"
+from_keypair="../keys/$from-keypair.bin"
+from_pubkey="../keys/$from-pubkey.bin"
+to_pubkey="../keys/$to-pubkey.bin"
 amount=$3
 
 echo "=== Ordre de virement ==="
