@@ -2,13 +2,20 @@
 
 Open 4 terminals: term1, term2, term3 and term4.
 
-In term1, term2, term3 and term 4
+In term1
 
 `cd <repo>`
+
+`git clone https://github.com/OlivierBarbier/coin.git`
+
+In term1, term2, term3 and term 4`
+
+`cd coin`
 
 In term1
 
 `git clone`
+
 `make all`
 
 In term3, term4
