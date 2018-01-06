@@ -22,9 +22,3 @@ struct keypair {
     uint8_t private[32];
     uint8_t public[64];
 };
-
-struct signature_t {
-    char message[1];
-    char crypted_message[1];
-    char public_key[32];
-};
