@@ -24,20 +24,20 @@ In term3, term4
 
 In term3
 
-`./balance alice`
+`./balance.sh alice`
 
 In term4
 
-`./balance bob`
+`./balance.sh bob`
 
 term3
 
-`./virement alice bob 1`
+`./virement.sh alice bob 1`
 
 wait 1 second
 
-`./balance alice`
+`./balance.sh alice`
 
 term4
 
-`./balance bob
+`./balance.sh bob
