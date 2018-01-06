@@ -4,7 +4,7 @@ Open 4 terminals: term1, term2, term3 and term4.
 
 In term1
 
-`cd <repo>`
+`cd /tmp`
 
 `git clone https://github.com/OlivierBarbier/coin.git`
 
@@ -14,21 +14,21 @@ In term1
 
 In term2
 
-`cd <repo>/coin`
+`cd /tmp/coin`
 
 `./bin/coin_ledger_serve`
 
 In term3, term4
 
-`cd <repo>/coin/scripts`
+`cd /tmp/coin/scripts`
 
 In term3
 
-`./balance.sh alice`
+`./balance.sh alice /* vBTC 4 */`
 
 In term4
 
-`./balance.sh bob`
+`./balance.sh bob /* vBTC 3 */`
 
 term3
 
@@ -36,8 +36,8 @@ term3
 
 wait 1 second
 
-`./balance.sh alice`
+`./balance.sh alice /* vBTC 3 */`
 
 term4
 
-`./balance.sh bob
+`./balance.sh bob /* vBTC 4 */`
