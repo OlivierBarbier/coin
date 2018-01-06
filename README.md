@@ -24,11 +24,15 @@ In term3, term4
 
 In term3
 
-`./balance.sh alice /* vBTC 4 */`
+`./balance.sh alice`
+
+-> vBTC 4
 
 In term4
 
-`./balance.sh bob /* vBTC 3 */`
+`./balance.sh bob`
+
+-> vBTC 3
 
 term3
 
@@ -36,8 +40,12 @@ term3
 
 wait 1 second
 
-`./balance.sh alice /* vBTC 3 */`
+`./balance.sh alice`
+
+-> vBTC 3
 
 term4
 
-`./balance.sh bob /* vBTC 4 */`
+`./balance.sh bob`
+
+-> vBTC 4
