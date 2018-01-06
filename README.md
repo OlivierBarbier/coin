@@ -8,23 +8,19 @@ In term1
 
 `git clone https://github.com/OlivierBarbier/coin.git`
 
-In term1, term2, term3 and term 4`
-
 `cd coin`
-
-In term1
-
-`git clone`
 
 `make all`
 
-In term3, term4
-
-`cd scripts`
-
 In term2
 
+`cd <repo>/coin`
+
 `./bin/coin_ledger_serve`
+
+In term3, term4
+
+`cd <repo>/coin/scripts`
 
 In term3
 
