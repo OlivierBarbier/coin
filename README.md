@@ -9,10 +9,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/OlivierBarbier/coin/master
 ```
 
 ### manually 
-Open 2 terminals: term1 and term2.
-
-In term1
-
 `cd /tmp`
 
 `git clone https://github.com/OlivierBarbier/coin.git`
