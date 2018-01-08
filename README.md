@@ -8,7 +8,7 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/OlivierBarbier/coin/master/coin-install.sh)"
 ```
 
-## 
+### manually 
 Open 2 terminals: term1 and term2.
 
 In term1
@@ -23,7 +23,7 @@ In term1
 
 `./bin/coin_ledger_serve`
 
-In term2
+## Usage
 
 `cd /tmp/coin/scripts`
 
