@@ -36,7 +36,8 @@ struct message * message_create (struct transfer * t, uint8_t * private) {
     struct message * m = (struct message *) malloc (sizeof (struct message));
     memcpy (&(m->t), t, sizeof (struct transfer));
     memcpy (m->hash, sha256 (t), 32 * sizeof (uint8_t));
-    memcpy (m->sig, sign (private, m->hash), 64 * sizeof (uint8_t));    
+    memcpy (m->sig, sign (private, m->hash), 64 * sizeof (uint8_t));   
+    memcpy (m->prev_hash, m->hash, 32 * sizeof (uint8_t));  
     return m;   
 }
 

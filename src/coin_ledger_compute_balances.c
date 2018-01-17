@@ -16,7 +16,7 @@ unsigned long balance (struct ledger * ledger, char * account)
 
     unsigned long credit=0, debit=0;
 
-    for (p=&ledger->m[0]; p<&ledger->m[10]; p++)
+    for (p=&ledger->m[0]; p<&ledger->m[LEDGER_SIZE]; p++)
     {
         if (strcmp (p->t.to, account) == 0)
         {
@@ -38,12 +38,12 @@ void ledger_dump_balance (struct ledger * ledger)
 {
     struct message * p;
 
-    for (p=&ledger->m[0]; p<&ledger->m[10]; p++)
+    for (p=&ledger->m[0]; p<&ledger->m[LEDGER_SIZE]; p++)
     {
         printf ("%s (%lu)\n", p->t.to, balance (ledger, p->t.to));
     }
 }
-
+/**/
 int main (int argc, char * argv[])
 {
     int ledger_fd;
@@ -69,3 +69,4 @@ int main (int argc, char * argv[])
 
     return 0;
 }
+/**/

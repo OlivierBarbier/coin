@@ -1,20 +1,23 @@
+#define LEDGER_SIZE 10
+
 struct transfer {
-    char from[256];
-    char to[256];
-    unsigned long amount;
+    char from[5];
+    char to[5];
+    unsigned short amount;
     uint8_t public_from[64];
     uint8_t public_to[64];
-    unsigned long nonce;
+    unsigned short nonce;
 };
 
 struct message {
     struct transfer t;
     uint8_t hash[32];
     uint8_t sig[64];
+    uint8_t prev_hash[32];
 };
 
 struct ledger {
-    struct message m[10];
+    struct message m[LEDGER_SIZE];
     unsigned short _tail;
 } ledger;
 

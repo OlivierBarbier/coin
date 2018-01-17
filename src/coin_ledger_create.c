@@ -14,7 +14,7 @@ void ledger_dump (struct ledger * ledger)
 {
     struct message * p;
 
-    for (p=&ledger->m[0]; p<&ledger->m[10]; p++)
+    for (p=&ledger->m[0]; p<&ledger->m[LEDGER_SIZE]; p++)
     {
         printf ("%s -> %s (%lu)\n",p->t.from,p->t.to, p->t.amount);
     }

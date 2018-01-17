@@ -24,7 +24,7 @@ unsigned long balance (struct ledger * ledger, char * account)
 
     unsigned long credit=0, debit=0;
 
-    for (p=&ledger->m[0]; p<&ledger->m[10]; p++)
+    for (p=&ledger->m[0]; p<&ledger->m[LEDGER_SIZE]; p++)
     {
         if (strcmp (p->t.to, account) == 0)
         {
@@ -43,7 +43,11 @@ unsigned long balance (struct ledger * ledger, char * account)
 
 int ledger_add_transfer (struct ledger * ledger, struct message * m)
 {
-    memcpy(&(ledger->m[ledger->_tail++]), m, sizeof (struct message));
+    if (ledger->_tail > 0) {
+        memcpy (m->prev_hash, ledger->m[ledger->_tail-1].hash,  32 * sizeof (uint8_t));
+    }
+
+    memcpy (&(ledger->m[ledger->_tail++]), m, sizeof (struct message));
  
  printf ("@%s -> %s (%lu)\n", ledger->m[ledger->_tail-1].t.from, ledger->m[ledger->_tail-1].t.to, ledger->m[ledger->_tail-1].t.amount);   
  

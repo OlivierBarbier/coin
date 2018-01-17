@@ -11,7 +11,6 @@
 
 #define LG_BUFFER   1024
 
-
 int lecture_arguments (int argc, char * argv[], int server, struct addrinfo **result);
 
 int main (int argc, char * argv[])

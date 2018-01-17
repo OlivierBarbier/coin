@@ -12,11 +12,20 @@
 
 void ledger_dump (struct ledger * ledger)
 {
+    int i;
     struct message * p;
 
     for (p=&ledger->m[0]; p<&ledger->m[10]; p++)
     {
-        printf ("%s -> %s (%lu)\n", p->t.from, p->t.to, p->t.amount);
+        printf ("%s -> %s (%lu) ", p->t.from, p->t.to, p->t.amount);
+        for (i=0; i<31; i++)
+        printf ("%02x", p->hash[i]);
+
+        printf (" ");
+
+        for (i=0; i<31; i++)
+        printf ("%02x", p->prev_hash[i]);
+        printf ("\n");
     }
 }
 
